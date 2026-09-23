@@ -133,14 +133,6 @@ Jste v pozici nezávislého konzultanta automatizace. Tři různí zákazníci p
 | **Klíčový technický argument pro volbu** | Montáž přímo na DIN lištu v rozváděči, integrovaný displej pro nastavení časovačů přímo na místě, robustní reléové výstupy pro motor a semafor, napájení 24 V DC / 230 V AC bez nutnosti vývoje vlastního plošného spoje. | **Ultra nízká spotřeba pro bateriový provoz** (Deep Sleep režimy), bezdrátová konektivita (ZigBee/Wi-Fi), e-ink displej a nízká cena při vysokém sériovém násobení nákladů. | **Vysoká spolehlivost v průmyslu (24/7),** snadná diagnostika LED diodami, modulární rozšiřitelnost I/O pro snímače/pneu, servis běžným elektrikářem v jazyku LAD. | **Obrovský výpočetní výkon** pro zpracování 4K obrazu a běh neuronové sítě v reálném čase, integrace GigE Vision kamer a propojení s podnikovou SQL/MES databází. |
 | **Hlavní riziko při volbě špatné platformy** *(proč by neuspěly ostatní dvě varianty)* | MCU: Nutnost vývoje vlastní desky, nízká odolnost vůči venkovnímu rušení a obtížný servis údržbou.<br><br>iPC: Zbytečně extrémní cena (> 30 tis. Kč), dlouhý start po výpadku napájení a vysoká spotřeba. | **PLC / iPC:** Neschopnost napájení z baterie (vysoký odběr), absence bezdrátových modulů, obrovské rozměry a zcela zruinující kusová cena (> 5 000 Kč) pro masovou sérii 10k ks. | **MCU:** Chybí průmyslové krytí, robustní svorkovnice, normované napájení 24V a servisovatelná dokumentace pro údržbu.<br><br>**iPC:** Zbytečně složitý operační systém, riziko zamrznutí OS, komplikovanější přímá obsluha binárních snímačů bez průmyslových I/O karet. | **PLC / MCU:** Absolutně nedostatečný výpočetní výkon pro AI/neuronové sítě, nemožnost zpracování 4K video-streamů ze 2 GigE kamer v reálném čase, chybějící podpora standardních databázových konektorů a složitá správa podnikového softwaru. |
 
-| Kritérium hodnocení                                                                                   | **Vzorová aplikace 0 (Vjezdová závora - VZOR)**                                                                                                                                                                           | Aplikace A (Pokojový termostat) | Aplikace B (Balicí linka) | Aplikace C (Kamerová kontrola svarů) |
-| :---------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------------ | :------------------------ | :----------------------------------- |
-| **Doporučená platforma** *(MCU / PLC / iPC)*                                                          | **Programovatelné relé / kompaktní PLC** *(např. Siemens LOGO!, Eaton easyE4)*                                                                                                                                            | `...`                           | `...`                     | `...`                                |
-| **Pořizovací cena HW na 1 kus** *(nízká < 500 Kč / střední 5–30 tis. Kč / vysoká > 50 tis. Kč)*       | **Střední** *(cca 3 500 – 6 000 Kč)*                                                                                                                                                                                      | `...`                           | `...`                     | `...`                                |
-| **Primární programovací jazyk** *(C/C++/MicroPython vs. IEC 61131-3 ST/LAD vs. Python/C#/C++ pod OS)* | **FBD / LAD** *(grafické funkční bloky nebo liniové schéma dle IEC 61131-3)*                                                                                                                                              | `...`                           | `...`                     | `...`                                |
-| **Klíčový technický argument pro volbu** *(např. spotřeba, determinismus, grafický výkon)*            | Montáž přímo na DIN lištu v rozváděči, integrovaný displej pro nastavení časovačů přímo na místě, robustní reléové výstupy pro motor a semafor, napájení 24 V DC / 230 V AC bez nutnosti vývoje vlastního plošného spoje. | `...`                           | `...`                     | `...`                                |
-| **Hlavní riziko při volbě špatné platformy** *(proč by neuspěly ostatní dvě varianty)*                | **MCU:** Nutnost vývoje vlastní desky, nízká odolnost vůči venkovnímu rušení a obtížný servis údržbou.<br>**iPC:** Zbytečně extrémní cena (> 30 tis. Kč), dlouhý start po výpadku napájení a vysoká spotřeba.             | `...`                           | `...`                     | `...`                                |
-
 > **Kritéria hodnocení úlohy 3 (bodování a známka):**
 > - :star: **Správnost technického přiřazení platforem (30 %):** Stoprocentně logické a obhajitelné přiřazení všech 3 technologií.
 > - :star: **Inženýrská a ekonomická argumentace (40 %):** Zohlednění ekonomiky sériovosti (kusová vs. masová výroba), spotřeby energie, náročnosti vývoje a schopností servisního personálu.
@@ -151,18 +143,22 @@ Jste v pozici nezávislého konzultanta automatizace. Tři různí zákazníci p
 > 	ČESKÝ NORMALIZAČNÍ INSTITUT. *ČSN EN 61131-3 ed. 3 (18 0080) Programovatelné řídicí jednotky - Část 3: Programovací jazyky*. Praha: Úřad pro technickou normalizaci, metrologii a státní zkušebnictví, 2014. Třídící znak 180080.
 > - **GigE Vision:** Komunikační standard rozhraní pro průmyslové kamery využívající gigabitový Ethernet, umožňující přenos nekomprimovaného videa vysokou rychlostí na velké vzdálenosti.
 
-<details>
-<summary> :bulb: Tip pro Aplikaci A vs. B vs. C: </summary>
-<p>U aplikace A rozhoduje kusová cena a odběr proudu z baterie (PLC ani iPC z baterie nerozběhnete). U aplikace B potřebujete vyměnitelný modul na DIN lištu s diagnostickými LED, který přeprogramuje běžný údržbář v jazyce LAD. U aplikace C potřebujete obrovský výpočetní výkon pro AI a ovladače pro průmyslové kamery, což MCU ani běžné PLC nezvládne.</p>
-</details>
+---
 
 :star2: **Bonusová otázka k úloze 3:**
 Co je to tzv. **SoftPLC** a jak umožňuje průmyslovému PC (iPC) kombinovat výhody operačního systému Windows/Linux a deterministického řízení reálného času v jediném fyzickém počítači?
 
 *Vaše odpověď:*
-`...`
 
----
+**SoftPLC** je softwarová implementace řídicí jednotky (PLC), která běží jako aplikace nebo rozšíření nad obecným procesorem (x86/x64) v průmyslovém PC (iPC). Nahrazuje tak potřebu vyhrazeného hardwarového PLC chodu.
+
+Přenos reálného času a spojení s běžným operačním systémem funguje následovně:
+
+1. **Real-Time Hypervisor / RTOS Kernel Extension:** Na iPC běží hypervizor nebo reálnocestný kernel (např. TwinCAT od Beckhoffu, CODESYS Control, Real-Time Hypervisor). Ten oddělí jádra procesoru (CPU cores) a vyhradí konkrétní jádra výhradně pro SoftPLC.
+2. **Deterministický běh reálného času (Hard Real-Time):** Vyhrazená CPU jádra vykonávají cyklus řízení PLC s přesně stanovenou periodou (např. 1 ms) bez ohledu na zátěž OS. Mají nejvyšší prioritu a plánovač běžného OS do nich nemůže zasahovat.
+3. **Sdílená paměť (Shared Memory):** Standardní uživatelské rozhraní, databáze nebo AI modely běží pod Windows/Linux na zbývajících jádrech. Data s deterministickou částí SoftPLC si předávají extrémně rychle přes sdílenou RAM bez latence síťového kabelu.
+
+Aplikace získává spolehlivost a determinismus klasického PLC v kombinaci s výpočetním a grafickým výkonem průmyslového PC.
 
 ### 4. Návrh a konfigurace řídicí jednotky pro čerpací stanici
 
