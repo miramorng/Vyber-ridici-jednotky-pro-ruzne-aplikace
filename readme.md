@@ -200,8 +200,8 @@ Jste v roli projektanta automatizace. Zákazník poptává zhotovení řízení 
      - Rozšiřující moduly (pokud jsou nutné pro AI 4–20 mA nebo AO 0–10 V): **SM 1231, 4 AI** (`6ES7 231-4HD32-0XB0`, resp. SIPLUS varianta) a **SB 1232, 1 AO** (`6ES7 232-4HA30-0XB0`)
      - Napájecí napětí zvolené jednotky: **24 V DC** (napájeno ze zálohovaného průmyslového zdroje SITOP)
      - Jak je vyřešeno odesílání dat na dispečink: **Pomocí integrovaného Ethernet/PROFINET portu na PLC (protokol Modbus TCP) připojeného do venkovního průmyslového GSM/LTE routeru (např. Teltonika RUT)**
-     - Odkaz na technický list (datasheet): [Siemens Industry Online Support – S7-1200 Datasheet](https://support.industry.siemens.com/)
-     - Odkazy na další použité zdroje: Siemens Industry Mall, TIA Portal Manuály pro S7-1200
+     - Odkaz na technický list (datasheet): [Siemens Industry Online Support – S7-1200 Datasheet](https://cache.industry.siemens.com/dl/files/829/109814829/att_1120874/v1/s71200_system_manual_en-US_en-US.pdf)
+     - Odkazy na další použité zdroje: Siemens Industry Mall, TIA Portal Manuály pro S7-1200 https://support.industry.siemens.com/cs/pd/566937?pdti=td&dl=en&lc=en-AF
 
 3. **Technické ověření z datasheetu:**
    - Zvládá zvolená jednotka garantovaný provoz při -20 °C? Doložte údaj z datasheetu: **Ano, řada SIPLUS extreme (obj. kód s předponou 6AG) má garantovaný rozsah provozních teplot od -40 °C do +60 °C (start od -25 °C) a odolnost vůči kondenzaci.**
