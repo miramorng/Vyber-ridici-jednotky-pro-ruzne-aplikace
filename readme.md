@@ -223,7 +223,7 @@ Jste v roli projektanta automatizace. Zákazník poptává zhotovení řízení 
 > - **Proudová smyčka 4–20 mA:** Průmyslový standard pro přenos analogových signálů ze senzorů. Výhodou oproti napěťovému signálu 0–10 V je vysoká odolnost proti elektromagnetickému rušení, nezávislost na odporu dlouhého vedení a detekce přetržení vodiče (pokud je proud roven 0 mA, jde o poruchu vedení – tzv. živá nula / live zero).
 >   Proudová smyčka. *Wikipedie: Otevřená encyklopedie* [online]. San Francisco (CA): Wikimedia Foundation, 2023, 2023-04-18 [cit. 2026-09-17]. Dostupné z: https://cs.wikipedia.org/wiki/Proudov%C3%A1_smy%C4%8Dka
 > - **Galvanické oddělení:** Elektrické oddělení dvou elektrických obvodů (např. pomocí optočlenů nebo relé), které zabraňuje přenosu rušení, rozdílům zemních potenciálů a chrání citlivé vstupy řídicí jednotky před zničením přepětím.
-> - **Bezpotenciálový kontakt** (označovaný také
+> - **Bezpotenciálový kontakt** (Beznapěťový) funguje jako vypínač - nejde do něj samo o sobě žádné napětí
 
 ### 5. Technický audit a oponentura nevhodného návrhu
 
